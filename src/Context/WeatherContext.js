@@ -7,7 +7,7 @@ export const WeatherContext = createContext();
 export const WeatherProvider = ({ children }) => {
   const [weatherData, setWeatherData] = useState(null);
 
-  const fetchWeather = async (zipCode) => {
+  const fetchWeather = async (zipCode = "80538") => {
     try {
         debugger
       const response = await axios.get(
